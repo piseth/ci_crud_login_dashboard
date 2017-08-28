@@ -24,9 +24,9 @@ class News extends CI_Controller {
         $data['news'] = $this->news_model->get_news();
         $data['title'] = 'News archive';
  
-        $this->load->view('templates/header', $data);
+        $this->load->view('backend/header', $data);
         $this->load->view('news/index', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('backend/footer');
     }
  
     public function view($slug = NULL)
@@ -40,9 +40,9 @@ class News extends CI_Controller {
  
         $data['title'] = $data['news_item']['title'];
  
-        $this->load->view('templates/header', $data);
+        $this->load->view('backend/header', $data);
         $this->load->view('news/view', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('backend/footer');
     }
     
     public function create()
@@ -57,9 +57,9 @@ class News extends CI_Controller {
  
         if ($this->form_validation->run() === FALSE)
         {
-            $this->load->view('templates/header', $title);
+            $this->load->view('backend/header', $title);
             $this->load->view('news/create');
-            $this->load->view('templates/footer');
+            $this->load->view('backend/footer');
  
         }
         else
@@ -85,9 +85,9 @@ class News extends CI_Controller {
 					'news_image' => $new_name
 				);
 				$this->news_model->set_news($data);
-				$this->load->view('templates/header', $title);
+				$this->load->view('backend/header', $title);
 				$this->load->view('news/success');
-				$this->load->view('templates/footer');
+				$this->load->view('backend/footer');
 			}
         }
     }
@@ -112,9 +112,9 @@ class News extends CI_Controller {
  
         if ($this->form_validation->run() === FALSE)
         {
-            $this->load->view('templates/header', $headerData);
+            $this->load->view('backend/header', $headerData);
             $this->load->view('news/edit', $headerData);
-            $this->load->view('templates/footer');
+            $this->load->view('backend/footer');
  
         }
         else

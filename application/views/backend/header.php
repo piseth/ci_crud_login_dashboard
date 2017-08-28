@@ -35,12 +35,12 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?= base_url('register') ?>">Register</a></li>
-						<li><a href="<?= base_url('login') ?>">Login</a></li>
+						<li><a href="<?= base_url('logout') ?>">Logout</a></li>
 					</ul>
 				</div><!-- .navbar-collapse -->
 			</div><!-- .container-fluid -->
 		</nav><!-- .navbar -->
 	</header><!-- #site-header -->
-
+	<h1>Simple CRUD</h1>
+    <p><a href="<?php echo site_url('news'); ?>">Home</a> | <a href="<?php echo site_url('news/create'); ?>">Add News</a></p>
 	<main id="site-content" role="main">
